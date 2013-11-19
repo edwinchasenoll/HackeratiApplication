@@ -382,6 +382,7 @@ public class hwyWatch
         //If monitoring display that waiting is about to occured
         if (MONITOR)
             System.out.println(Calendar.getInstance().getTime() + " " + TABLENAME + " Collecting ");
+            
         
         //Initialize vehicleDate and endDate as current
         Calendar vehicleDate = Calendar.getInstance();
@@ -442,6 +443,9 @@ public class hwyWatch
             try
             {
                 result = execute.executeUpdate(sql);
+                if (MONITOR && records%1000 == 0)
+                    System.out.println(TABLENAME + " Collected " + records + " records.");
+                
             } catch (SQLException ex)
             {
                 Logger.getLogger(hwyWatch.class.getName()).log(Level.SEVERE, null, ex);

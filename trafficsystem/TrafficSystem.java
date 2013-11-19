@@ -10,6 +10,7 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Scanner;
+import java.util.TimeZone;
 
 /**
  *
@@ -47,15 +48,15 @@ public class TrafficSystem
     
     public static void main(String[] args)
     {
-        //Initialize hwyWatch with collect period, table name, file name, time will be set to construction time
-        hwyWatch hwy27 = new hwyWatch(oneHour, "hwy27", "hwy27Data.txt");
+        //Initialize hwyWatch with collect period, table name, file name, time will be set to the beginning of time
+        hwyWatch hwy27 = new hwyWatch(oneHour, "hwy27", "hwy27Data.txt", 0, 0, 0, 0, 0, 0, TimeZone.getTimeZone("America/New York"));
 		myWatches.add(hwy27);
         
         //Start collection process
         hwy27.getThread().start();
 
-        //Initialize hwyWatch with collect period, table name, file name, time will be set to construction time
-        hwyWatch hwy44 = new hwyWatch(oneMinute, "hwy44", "hwy44Data.txt");
+        //Initialize hwyWatch with collect period, table name, file name, time will be set to the beginning of time
+        hwyWatch hwy44 = new hwyWatch(oneMinute, "hwy44", "hwy44Data.txt", 0, 0, 0, 0, 0, 0, TimeZone.getTimeZone("America/New York"));
         myWatches.add(hwy44);
 		
         //Start collection process
