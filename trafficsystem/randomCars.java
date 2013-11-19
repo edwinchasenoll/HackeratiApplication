@@ -33,14 +33,15 @@ public class randomCars
         String fileName = "hwy27Data.txt";
         int min = 500;
         int max = 1500;
+        int year = 2012;
+        boolean append = false;
+		
         List<Calendar> month = new ArrayList<Calendar>();
         Random rand = new Random();
         int cars;
         cars = rand.nextInt(max - min) + min;
-        System.out.println(cars);
-        int year = 2012;
-        boolean append = false;
-        for (int i = 2; i > 2; i--)
+        
+        for (int i = 2; i > 0; i--)
         {
             randomMonth(year, 12, zone, 31, cars, fileName, append);
             append = true;
