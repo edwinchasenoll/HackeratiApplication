@@ -61,7 +61,7 @@ public class randomCars
                 randomMonth(year, 2, zone, 28, cars, fileName, append);
             randomMonth(year, 1, zone, 31, cars, fileName, append);
             year--;
-            cars = rand.nextInt(1000) + 500;
+            cars = rand.nextInt(max - min) + min;
         }
         
         
