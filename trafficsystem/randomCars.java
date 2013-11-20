@@ -34,6 +34,7 @@ public class randomCars
         int min = 500;
         int max = 1500;
         int year = 2012;
+        int yearsBack = 2;
         boolean append = false;
 		
         List<Calendar> month = new ArrayList<Calendar>();
@@ -41,7 +42,7 @@ public class randomCars
         int cars;
         cars = rand.nextInt(max - min) + min;
         
-        for (int i = 2; i > 0; i--)
+        for (int i = yearsBack; i > 0; i--)
         {
             randomMonth(year, 12, zone, 31, cars, fileName, append);
             append = true;
