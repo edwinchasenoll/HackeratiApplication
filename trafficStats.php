@@ -16,8 +16,9 @@ Also on the heading the count over the ENTIRE graph and average speed over the g
 <html>
     <head>
         <title>Traffic System</title>
+        <link rel="stylesheet" type="text/css" href="CSS/custom.css" media="screen" />
     </head>
-    <body>
+    <body class="p">
         <!-- Page actions to itself -->
         <form ACTION="trafficStats.php" method="post">
             
@@ -841,8 +842,9 @@ Also on the heading the count over the ENTIRE graph and average speed over the g
         ?>
 		
         <!-- Begin column graph -->
-        <table width="100%" border="1">
-          <tr>
+        <div class="nonScrollingDiv">
+        <table class="bargraph">
+          <tr class="barRow">
             <?php
                 
                 //Find max value in $dataArray 
@@ -866,106 +868,105 @@ Also on the heading the count over the ENTIRE graph and average speed over the g
                 $rowVal10 = $rowVal9 - ($rowVal1/10);
 
                 //Write vertical axis max value cell
-                    echo "<td height=\"15\" valign=\"bottom\" align=\"right\">". $rowVal1 . "</td>";
+                    echo "<td class=\"vAxis\">". $rowVal1 . "</td>";
                     
                 //Call to funtion that writes the html for the column chart. The first argument is number of columns, the second the increment for the vertical axis (for calc proportional height), and the count (for calc height)
                 for($i = 0; $i < $columns; $i++)
                         column($columns,$rowVal10,$dataArray[$i]);
             ?>
           </tr>
-          <tr>
+          <tr class="barRow">
   
             <!-- html for the remaining vertical axis values -->
-            <td height="15" valign="bottom"><div align="right"><?php echo $rowVal2 ?></div></td>
+            <td class="vAxis"><?php echo $rowVal2 ?></td>
           </tr>
-          <tr>
-            <td height="15" valign="bottom"><div align="right"><?php echo $rowVal3 ?></div></td>
+          <tr class="barRow">
+            <td class="vAxis"><?php echo $rowVal3 ?></td>
           </tr>
-          <tr>
-            <td height="15" valign="bottom"><div align="right"><?php echo $rowVal4 ?></div></td>
+          <tr class="barRow">
+            <td class="vAxis"><?php echo $rowVal4 ?></td>
           </tr>
-          <tr>
-            <td height="15" valign="bottom"><div align="right"><?php echo $rowVal5 ?></div></td>
+          <tr class="barRow">
+            <td class="vAxis"><?php echo $rowVal5 ?></td>
           </tr>
-          <tr>
-            <td height="15" valign="bottom"><div align="right"><?php echo $rowVal6 ?></div></td>
+          <tr class="barRow">
+            <td class="vAxis"><?php echo $rowVal6 ?></td>
           </tr>
-          <tr>
-            <td height="15" valign="bottom"><div align="right"><?php echo $rowVal7 ?></div></td>
+          <tr class="barRow">
+            <td class="vAxis"><?php echo $rowVal7 ?></td>
           </tr>
-          <tr>
-            <td height="15" valign="bottom"><div align="right"><?php echo $rowVal8 ?></div></td>
+          <tr class="barRow">
+            <td class="vAxis"><?php echo $rowVal8 ?></td>
           </tr>
-          <tr>
-            <td height="15" valign="bottom"><div align="right"><?php echo $rowVal9 ?></div></td>
+          <tr class="barRow">
+            <td class="vAxis"><?php echo $rowVal9 ?></td>
           </tr>
-          <tr>
-            <td height="15" valign="bottom"><div align="right"><?php echo $rowVal10 ?></div></td>
+          <tr class="barRow">
+            <td class="vAxis"><?php echo $rowVal10 ?></td>
           </tr>
-          <tr>
-            <td height="15" valign="bottom"><div align="right">0</div></td>
+          <tr class="barRow">
+            <td class="vAxis">0</td>
           </tr>
-          <tr>
-            
+          <tr class="barRow">
             <?php
 			
                 //Write horizontal axis values for months
                 if ($postMonth == "All")
                 {
-                    echo "<td height=\"15\" valign=\"bottom\" align=\"center\">Mth</td>";
-                    echo "<td align=\"center\">Jan</td>";
-                    echo "<td align=\"center\">Feb</td>";
-                    echo "<td align=\"center\">Mar</td>";
-                    echo "<td align=\"center\">Apr</td>";
-                    echo "<td align=\"center\">May</td>";
-                    echo "<td align=\"center\">Jun</td>";
-                    echo "<td align=\"center\">Jul</td>";
-                    echo "<td align=\"center\">Aug</td>";
-                    echo "<td align=\"center\">Sep</td>";
-                    echo "<td align=\"center\">Oct</td>";
-                    echo "<td align=\"center\">Nov</td>";
-                    echo "<td align=\"center\">Dec</td>";
+                    echo "<td class=\"corner\">Mth</td>";
+                    echo "<td class=\"hAxis\">Jan</td>";
+                    echo "<td class=\"hAxis\">Feb</td>";
+                    echo "<td class=\"hAxis\">Mar</td>";
+                    echo "<td class=\"hAxis\">Apr</td>";
+                    echo "<td class=\"hAxis\">May</td>";
+                    echo "<td class=\"hAxis\">Jun</td>";
+                    echo "<td class=\"hAxis\">Jul</td>";
+                    echo "<td class=\"hAxis\">Aug</td>";
+                    echo "<td class=\"hAxis\">Sep</td>";
+                    echo "<td class=\"hAxis\">Oct</td>";
+                    echo "<td class=\"hAxis\">Nov</td>";
+                    echo "<td class=\"hAxis\">Dec</td>";
                 }
                 else if ($postDay == "All") //Write horizontal axis values for days
                 {
-                    echo "<td height=\"15\" valign=\"bottom\" align=\"center\">Day</td>";
+                    echo "<td class=\"corner\">Day</td>";
                     for ($i = 1; $i <= $columns; $i++)
-                        echo "<td align=\"center\">".$i."</td>";
+                        echo "<td class=\"hAxis\">".$i."</td>";
                 }
                 else if ($postHour == "All") //Write horizontal axis values for hours
                 {
-                    echo "<td height=\"15\" valign=\"bottom\" align=\"center\">Hr</td>";
-                    echo "<td align=\"center\">12</td>";
+                    echo "<td class=\"corner\">Hr</td>";
+                    echo "<td class=\"hAxis\">12</td>";
                     for ($i = 1; $i <= 12; $i++)
-                        echo "<td align=\"center\">".$i."</td>";
+                        echo "<td class=\"hAxis\"td>".$i."</td>";
                     for ($i = 1; $i <= 11; $i++)
-                        echo "<td align=\"center\">".$i."</td>";
+                        echo "<td class=\"hAxis\"td>".$i."</td>";
                 }
                 else //Write horizontal axis values for minutes
                 {
-                    echo "<td height=\"15\" valign=\"bottom\" align=\"center\">Min</td>";
+                    echo "<td class=\"corner\">Min</td>";
                     for ($i = 0; $i < $columns; $i++)
-                        echo "<td align=\"center\">".$i."</td>";
+                        echo "<td class=\"hAxis\"td>".$i."</td>";
                 }
             ?>
           </tr>
         </table>
-		
+        </div>
         <!-- Write a tables for headings Time, Speed, Count Over Graph, and Average Speed Over Graph -->
-        <div style="border: 5px; color: blue; background-color: white; margin-left: auto; margin-right: auto; overflow: auto;">
-        <table width="100%" align="center" border="1" RULES=ROWS FRAME=BOX class="component">
+        <div class="nonScrollingDiv">
+        <table class="bargraph">
             <tr>
-                <td width="20%">
+                <td class="headingLarge">
                     Time
                 </td>
-                <td width="10%">
+                <td class="headingSmall">
                     Speed
                 </td>
-                <td>
-                    Count Over Graph: <?php echo count($speedArray); ?>
+                <td class="headingSmall">
+                    Count: <?php echo count($speedArray); ?>
                 </td>
-                <td>
-                    Average Speed Over Graph: <?php
+                <td class="headingLarge">
+                    Average Speed: <?php
 					
                     //Calculate average speed over all represented data
                     $average = 0;
@@ -981,13 +982,12 @@ Also on the heading the count over the ENTIRE graph and average speed over the g
             </tr>
         </table>
         </div>
-		
         <!-- Write tables listing times and speeds of represented data -->
-        <div style="border: 5px; color: white; background-color: blue; margin-left: auto; margin-right: auto; height: 250px; overflow: auto;">
-        <table width="100%" align="center" border="1" RULES=ROWS FRAME=BOX class="component">
+        <div class="scrollingDiv">
+        <table class="listChart">
              <?php
                 for ($i = 0; $i < count($timeArray); $i++)
-                    echo "<tr><td width=\"20%\">" . $timeArray[$i] . "</td><td>" . $speedArray[$i] . "</td></tr>\n";
+                    echo "<tr><td class=\"listItemLarge\">" . $timeArray[$i] . "</td><td class=\"listItemSmall\">" . $speedArray[$i] . "</td><td class=\"listItemSmall\"></td></td><td class=\"listItemLarge\"></td></tr>\n";
              ?>    
         </table>
         </div>
@@ -1012,20 +1012,20 @@ function writeItems($item, $selection)
 //First parament is the number of columns. The second and third are used in calculating the height of each column
 function column($col, $heightPer, $height)
 {
-  echo "<td width=\"" . 95/$col . "%\" rowspan=\"11\" valign=\"bottom\" align=\"center\">\n";
-  echo "<table width=\"100%\" border=\"1\" height=\"" . (((280/11)/$heightPer)*($height)) . "\" bordercolor=\"#FF0000\" bgcolor=\"#FF0000\">\n";
-  echo "<tr align=\"middle\" valign=\"top\">\n";
-  echo "<td>";
+  echo "<td class=\"columnContainerCell\" width=\"" . 95/$col . "%\" rowspan=\"11\">\n";
+  echo "<table class=\"columnContainer\" height=\"" . (((100/11)/$heightPer)*($height)) . "%\">\n";
+  echo "<tr>\n";
+  echo "<td class=\"column\">";
   
   //Display the count in the bar
   //Displayed vertically as not to change column width
   if ($height != 0)
   {
-      echo "<font size=\"0\" color=\"white\">";
+      //echo "<font size=\"0\" color=\"white\">";
       $heightArray = str_split($height);
       for($i = 0; $i < count($heightArray); $i++)
             echo $heightArray[$i]."<br>";
-      echo "</font>";
+      //echo "</font>";
   }
   echo "\n";
   echo "</td>\n";

@@ -1,0 +1,271 @@
+.p{
+    height: 100%; 
+    font-family: Arial,Helvetica,sans-serif;
+    display: block;
+    font-size: 14px;
+    margin-right: 8px;
+    margin-left: 8px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    background-color: silver;
+}
+
+.bargraph {
+    background-color: blue;
+    background-position: left top;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-right-width: 2px;
+    border-left-width: 2px;
+    border-bottom-width: 2px;
+    border-top-width: 2px;
+    border-right-color: white;
+    border-left-color: white;
+    border-bottom-color: white;
+    border-top-color: white;
+    width: 100%;
+    height: 50%;
+    position: relative;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.barRow{
+    height: 8.33%;
+}
+.vAxis{
+    
+    background-color: white;
+    color: blue;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    border-right-color: white;
+    border-left-color: white;
+    border-bottom-color: white;
+    border-top-color: white;
+    width: 3%;
+    text-align: right;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-top-style: solid;
+}
+
+.corner{
+    
+    color: blue;
+    background-color: silver;
+    text-align: center;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    border-right-color: white;
+    border-left-color: white;
+    border-bottom-color: white;
+    border-top-color: white;
+}
+
+.hAxis{
+    border-collapse: collapse;
+    background-color: white;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    border-right-color: red;
+    border-left-color: red;
+    border-bottom-color: red;
+    border-top-color: red;
+    text-align: center;
+    color: blue;
+}
+
+.columnContainerCell{
+    
+    vertical-align: bottom;
+}
+
+.columnContainer{
+    width: 100%;
+    border-collapse: collapse;
+    border-bottom: 0px;
+    margin-bottom: 0px;
+}
+.column{
+    
+    background-color: red;
+    width: 100%;
+    text-align: center;
+    vertical-align: top;
+    color: white;
+}
+
+.headingSmall{
+    width: 10%;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    border-right-color: white;
+    border-left-color: white;
+    border-bottom-color: white;
+    border-top-color: white;
+    color: white;
+}
+
+.headingMedium{
+    width: 20%;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    border-right-color: white;
+    border-left-color: white;
+    border-bottom-color: white;
+    border-top-color: white;
+    color: white;
+}
+
+.headingLarge{
+    height: 10%;
+    width: 40%;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    border-right-color: white;
+    border-left-color: white;
+    border-bottom-color: white;
+    border-top-color: white;
+    color: white;
+}
+
+.nonScrollingDiv{
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: auto;
+    border-top-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-right-width: 2px;
+    border-left-width: 2px;
+    border-top-width: 2px;
+    border-right-color: red;
+    border-left-color: red;
+    border-top-color: red;
+}
+.scrollingDiv{
+    width: 100%;
+    height: 300px;
+    overflow-y: scroll;
+    overflow-x: auto;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-right-color: red;
+    border-left-color: red;
+    border-bottom-color: red;
+}
+.listChart{ 
+    width: 100%;
+    background-color: silver;
+    background-position: left top;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-right-width: 2px;
+    border-left-width: 2px;
+    border-bottom-width: 2px;
+    border-top-width: 2px;
+    border-right-color: white;
+    border-left-color: white;
+    border-bottom-color: white;
+    border-top-color: white;
+    color: blue;
+}
+
+.listItemSmall{
+    width: 10%;
+    border-color: white;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    border-right-color: white;
+    border-left-color: white;
+    border-bottom-color: white;
+    border-top-color: white;
+}
+
+.listItemMedium{
+    width: 20%;
+    border-color: white;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    border-right-color: white;
+    border-left-color: white;
+    border-bottom-color: white;
+    border-top-color: white;
+}
+
+.listItemLarge{
+    width: 40%;
+    border-color: white;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    border-right-color: white;
+    border-left-color: white;
+    border-bottom-color: white;
+    border-top-color: white;
+}
